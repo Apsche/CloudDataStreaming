@@ -1,5 +1,7 @@
 /***
 This is the Kafka Streams application
+ToDo:
+  Change <key,value> data types to appropriate data type
 ***/
 
 import org.apache.kafka.common.serialization.Serdes;

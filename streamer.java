@@ -29,10 +29,10 @@ public Class streamer
 		final StreamsBuilder builder = new StreamsBuilder();
 
 		// Get the stream from the first topic
-		KStream<String, String> trafficSource = builder.stream("streams-traffic-input");
+		KStream<String, String> trafficSource = builder.stream("Traffic");
 
 		// Get the stream from the second topic
-		KStream<String, String> weatherSource = builder.stream("streams-weather-input");
+		KStream<String, String> weatherSource = builder.stream("Weather");
 
 		// Join the two streams on the location
 		KStream<String, String> joined = trafficSource.join(weatherSource, (leftValue, rightValue)
@@ -46,7 +46,7 @@ public Class streamer
 
 		// Set the output topic
 		// The data from the joined stream will be sent here
-		joined.to("streams-output");
+		joined.to("Output");
 
 		// Get the created topology from the builder
 		final Topology top = builder.build();

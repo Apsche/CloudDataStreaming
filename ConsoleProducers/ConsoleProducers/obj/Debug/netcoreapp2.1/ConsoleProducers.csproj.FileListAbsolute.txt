@@ -1,0 +1,11 @@
+C:\Users\jweid\source\repos\Cloud-Data-Streaming\ConsoleProducers\ConsoleProducers\bin\Debug\netcoreapp2.1\ConsoleProducers.deps.json
+C:\Users\jweid\source\repos\Cloud-Data-Streaming\ConsoleProducers\ConsoleProducers\bin\Debug\netcoreapp2.1\ConsoleProducers.runtimeconfig.json
+C:\Users\jweid\source\repos\Cloud-Data-Streaming\ConsoleProducers\ConsoleProducers\bin\Debug\netcoreapp2.1\ConsoleProducers.runtimeconfig.dev.json
+C:\Users\jweid\source\repos\Cloud-Data-Streaming\ConsoleProducers\ConsoleProducers\bin\Debug\netcoreapp2.1\ConsoleProducers.dll
+C:\Users\jweid\source\repos\Cloud-Data-Streaming\ConsoleProducers\ConsoleProducers\obj\Debug\netcoreapp2.1\ConsoleProducers.csprojAssemblyReference.cache
+C:\Users\jweid\source\repos\Cloud-Data-Streaming\ConsoleProducers\ConsoleProducers\obj\Debug\netcoreapp2.1\ConsoleProducers.csproj.CoreCompileInputs.cache
+C:\Users\jweid\source\repos\Cloud-Data-Streaming\ConsoleProducers\ConsoleProducers\obj\Debug\netcoreapp2.1\ConsoleProducers.AssemblyInfoInputs.cache
+C:\Users\jweid\source\repos\Cloud-Data-Streaming\ConsoleProducers\ConsoleProducers\obj\Debug\netcoreapp2.1\ConsoleProducers.AssemblyInfo.cs
+C:\Users\jweid\source\repos\Cloud-Data-Streaming\ConsoleProducers\ConsoleProducers\bin\Debug\netcoreapp2.1\ConsoleProducers.pdb
+C:\Users\jweid\source\repos\Cloud-Data-Streaming\ConsoleProducers\ConsoleProducers\obj\Debug\netcoreapp2.1\ConsoleProducers.dll
+C:\Users\jweid\source\repos\Cloud-Data-Streaming\ConsoleProducers\ConsoleProducers\obj\Debug\netcoreapp2.1\ConsoleProducers.pdb

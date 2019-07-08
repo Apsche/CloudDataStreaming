@@ -1,19 +1,29 @@
 /***
 This is the Kafka Streams application
-ToDo:
-  Change <key,value> data types to appropriate data type
+To run, it must be compiled with the dependencies
+Compile: javac -cp "kafka-clients-2.3.0.jar;kafka-streams-2.3.0.jar" streamer.java
+Run: java -cp "kafka-clients-2.3.0.jar;kafka-streams-2.3.0.jar" streamer
 ***/
 
 import org.apache.kafka.common.serialization.Serdes;
+import org.apache.kafka.common.config.SaslConfigs;
 import org.apache.kafka.streams.KafkaStreams;
+import org.apache.kafka.streams.kstream.KStream;
+import org.apache.kafka.streams.kstream.Materialized;
+import org.apache.kafka.streams.kstream.Produced;
 import org.apache.kafka.streams.StreamsBuilder;
 import org.apache.kafka.streams.StreamsConfig;
 import org.apache.kafka.streams.Topology;
+import org.apache.kafka.clients.producer.ProducerConfig;
+import org.apache.kafka.streams.kstream.JoinWindows;
+import org.apache.kafka.streams.kstream.Joined;
+import org.apache.kafka.streams.KafkaStreams;
 
+import java.util.concurrent.CountDownLatch;
 import java.util.Properties;
 import java.time.Duration;
 
-public Class streamer
+public class streamer
 {
 	public static void main(String args[]) throws Exception
 	{
@@ -22,12 +32,12 @@ public Class streamer
 		Properties props = new Properties();
 		props.put(StreamsConfig.APPLICATION_ID_CONFIG, "streamer");
 		props.put(StreamsConfig.BOOTSTRAP_SERVERS_CONFIG, "pkc-ldrz4.us-east-2.aws.confluent.cloud:9092");
-		props.put(StreamsConfig.KEY_SERDE_CLASS_CONFIG, "io.confluent.kafka.serializers.KafkaAvroSerializer");
-		props.put(StreamsConfig.VALUE_SERDE_CLASS_CONFIG, "io.confluent.kafka.serializers.KafkaAvroSerializer");
+		props.put(StreamsConfig.DEFAULT_KEY_SERDE_CLASS_CONFIG, "io.confluent.kafka.serializers.KafkaAvroSerializer");
+		props.put(StreamsConfig.DEFAULT_VALUE_SERDE_CLASS_CONFIG, "io.confluent.kafka.serializers.KafkaAvroSerializer");
 		props.put(StreamsConfig.SECURITY_PROTOCOL_CONFIG, "SASL_SSL");
-		props.put(SASL_MECHANISM, "PLAIN");
-		props.put(SASL_JAAS_CONFIG, "org.apache.kafka.common.security.plain.PlainLoginModule \ username=7BYZ6FIYJIJQ7NCR \ " +
-			"password= \ Du+0pUmUl5rabqiJQGO20EBlpTHhk7AnEpC2V02WuljKhw0hQBdnE7uKUzGK5zkY \ ;");//Not sure if i did this one right
+		props.put(SaslConfigs.SASL_MECHANISM, "PLAIN");
+		props.put(SaslConfigs.SASL_JAAS_CONFIG, "org.apache.kafka.common.security.plain.PlainLoginModule \\ username=7BYZ6FIYJIJQ7NCR \\ " +
+			"password= \\ Du+0pUmUl5rabqiJQGO20EBlpTHhk7AnEpC2V02WuljKhw0hQBdnE7uKUzGK5zkY \\ ;");//Not sure if i did this one right
 		props.put(StreamsConfig.producerPrefix(ProducerConfig.REQUEST_TIMEOUT_MS_CONFIG), 20000);
 
 		// Defines computational logic of streams builder
@@ -60,7 +70,7 @@ public Class streamer
 		System.out.println(top.describe());
 
 		// Construct streams client with the above constructed properties
-		final KafkaStreams streams = KafkaStreams(top, props);
+		final KafkaStreams streams = new KafkaStreams(top, props);
 
 		// Create a shutdown hook to capture a user interrupt
 		final CountDownLatch latch = new CountDownLatch(1);

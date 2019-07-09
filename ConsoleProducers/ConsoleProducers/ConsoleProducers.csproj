@@ -5,6 +5,17 @@
     <TargetFramework>netcoreapp2.1</TargetFramework>
   </PropertyGroup>
 
+  
+  <ItemGroup>
+    <None Remove="config" />
+  </ItemGroup>
+ 
+<!--
+  <ItemGroup>
+    <Compile Include="config" />
+  </ItemGroup>
+   -->
+
   <ItemGroup>
     <PackageReference Include="Confluent.Kafka" Version="1.1.0" />
     <PackageReference Include="Newtonsoft.Json" Version="12.0.2" />

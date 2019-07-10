@@ -3,6 +3,7 @@ using System.Net.Http;
 using System.Threading.Tasks;
 using OpenWeatherMap;
 using OpenWeatherMap.Entities;
+using OpenWeatherMap.Util;
 
 namespace ConsoleProducers
 {
@@ -41,6 +42,7 @@ namespace ConsoleProducers
             {
                 ApiKey = key
             });
+            RequestOptions.Default.Unit = UnitType.Imperial;
 
             Weather currentWeather = null;
 

@@ -1265,11 +1265,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\jweid\\source\\repos\\Cloud-Data-Streaming\\ConsoleProducers\\ConsoleProducers\\ConsoleProducers.csproj",
+      "projectUniqueName": "C:\\Users\\jweid\\source\\repos\\Cloud-Data-Streaming\\ConsoleProducers\\ConsoleProducers.csproj",
       "projectName": "ConsoleProducers",
-      "projectPath": "C:\\Users\\jweid\\source\\repos\\Cloud-Data-Streaming\\ConsoleProducers\\ConsoleProducers\\ConsoleProducers.csproj",
+      "projectPath": "C:\\Users\\jweid\\source\\repos\\Cloud-Data-Streaming\\ConsoleProducers\\ConsoleProducers.csproj",
       "packagesPath": "C:\\Users\\jweid\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\jweid\\source\\repos\\Cloud-Data-Streaming\\ConsoleProducers\\ConsoleProducers\\obj\\",
+      "outputPath": "C:\\Users\\jweid\\source\\repos\\Cloud-Data-Streaming\\ConsoleProducers\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

@@ -17,11 +17,13 @@ namespace ConsoleProducers
         {
             try
             {
-                var cloudConfig = (await File.ReadAllLinesAsync(configPath))
-                    .Where(line => !line.StartsWith("#"))
-                    .ToDictionary(
-                        line => line.Substring(0, line.IndexOf('=')),
-                        line => line.Substring(line.IndexOf('=') + 1));
+                var cloudConfig = await ConfigToDictionary(configPath);
+                
+                // = (await File.ReadAllLinesAsync(configPath))
+                //     .Where(line => !line.StartsWith("#"))
+                //     .ToDictionary(
+                //         line => line.Substring(0, line.IndexOf('=')),
+                //         line => line.Substring(line.IndexOf('=') + 1));
 
                 var clientConfig = new ClientConfig
                 {
@@ -45,6 +47,15 @@ namespace ConsoleProducers
                 System.Environment.Exit(1);
                 return null; // avoid not-all-paths-return-value compiler error.
             }
+        }
+
+        public async Task<Dictionary<string, string>> ConfigToDictionary(string path)
+        {
+           return (await File.ReadAllLinesAsync(path))
+                    .Where(line => !line.StartsWith("#"))
+                    .ToDictionary(
+                        line => line.Substring(0, line.IndexOf('=')),
+                        line => line.Substring(line.IndexOf('=') + 1));
         }
 
         public async Task CreateTopicMaybe(string name, int numPartitions, short replicationFactor, ClientConfig cloudConfig)
@@ -83,7 +94,7 @@ namespace ConsoleProducers
                     }
                     else 
                     {
-                        Console.WriteLine($"Sent message to {topic} at {DateTime.Now.ToLongTimeString()}");
+                        Console.WriteLine($"Sent message to {topic} at {DateTime.Now.ToShortDateString()} {DateTime.Now.ToLongTimeString()}");
                     }
                 });
 

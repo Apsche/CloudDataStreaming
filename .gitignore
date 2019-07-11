@@ -1,6 +1,7 @@
 **/cacert.pem
 **/config
 *.vs
+.vscode
 
 # dependencies
 node_modules

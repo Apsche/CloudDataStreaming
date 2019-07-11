@@ -14,7 +14,7 @@ function LandingContent() {
   return (
     <div>
       <Grid container>
-        <Grid item xs={12} md={8} lg={6}>
+        <Grid item xs={10} md={8} lg={6}>
           <Card className={classes.card}>
             <CardContent>
               <Typography variant="h4">

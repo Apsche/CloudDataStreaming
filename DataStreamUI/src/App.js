@@ -1,5 +1,3 @@
-import "./App.css";
-
 import Header from "./containers/Header/Header";
 import Landing from "./containers/Landing/Landing";
 import React from "react";

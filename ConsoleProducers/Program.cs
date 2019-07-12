@@ -48,7 +48,7 @@ namespace ConsoleProducers
         {
             // Get traffic data on 271 near Campus II
             var currentTraffic = _apiClient.GetTrafficData(_configPath, "41.57505,-81.44750").Result;
-            _client.Produce("testTopic", _config, "trafficKey", currentTraffic);
+            _client.Produce("Traffic", _config, "trafficKey", currentTraffic);
         }
         private static void OnWeatherTimedEvent(Object source, ElapsedEventArgs e)
         {

@@ -21,7 +21,7 @@ namespace ConsoleProducers
 
             try
             {
-                HttpResponseMessage response = await _client.GetAsync($"{rootPath}/{style}/{zoom}/json?key={key}&point={point}");
+                HttpResponseMessage response = await _client.GetAsync($"{rootPath}/{style}/{zoom}/json?key={key}&point={point}&unit=mph");
                 response.EnsureSuccessStatusCode();
                 trafficData = await response.Content.ReadAsStringAsync();
             }

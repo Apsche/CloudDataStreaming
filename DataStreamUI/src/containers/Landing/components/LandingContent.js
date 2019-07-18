@@ -9,7 +9,7 @@ const useStyles = makeStyles({
   }
 });
 
-function LandingContent() {
+function LandingContent(props) {
   const classes = useStyles();
   return (
     <div>
@@ -21,7 +21,11 @@ function LandingContent() {
                 This is where we'll display our sweet info
               </Typography>
               <Typography variant="body2">
-                You know... when we have it...
+                {props.response ? (
+                  <span>We have it! {props.response}</span>
+                ) : (
+                  <span>We don't have it :(</span>
+                )}
               </Typography>
             </CardContent>
           </Card>

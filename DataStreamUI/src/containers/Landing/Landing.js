@@ -11,7 +11,7 @@ export class Landing extends Component {
         <Grid container justify="center" spacing={3}>
           <Grid item xs={12} md={10} lg={8}>
             <LandingHeader />
-            <LandingContent />
+            <LandingContent response={this.props.response} />
           </Grid>
         </Grid>
       </div>

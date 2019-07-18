@@ -1,0 +1,11 @@
+C:\Users\wilso\Desktop\Development\ConsoleConsumer\ConsoleConsumer\bin\Debug\netcoreapp2.1\ConsoleConsumer.deps.json
+C:\Users\wilso\Desktop\Development\ConsoleConsumer\ConsoleConsumer\bin\Debug\netcoreapp2.1\ConsoleConsumer.runtimeconfig.json
+C:\Users\wilso\Desktop\Development\ConsoleConsumer\ConsoleConsumer\bin\Debug\netcoreapp2.1\ConsoleConsumer.runtimeconfig.dev.json
+C:\Users\wilso\Desktop\Development\ConsoleConsumer\ConsoleConsumer\bin\Debug\netcoreapp2.1\ConsoleConsumer.dll
+C:\Users\wilso\Desktop\Development\ConsoleConsumer\ConsoleConsumer\bin\Debug\netcoreapp2.1\ConsoleConsumer.pdb
+C:\Users\wilso\Desktop\Development\ConsoleConsumer\ConsoleConsumer\obj\Debug\netcoreapp2.1\ConsoleConsumer.csprojAssemblyReference.cache
+C:\Users\wilso\Desktop\Development\ConsoleConsumer\ConsoleConsumer\obj\Debug\netcoreapp2.1\ConsoleConsumer.csproj.CoreCompileInputs.cache
+C:\Users\wilso\Desktop\Development\ConsoleConsumer\ConsoleConsumer\obj\Debug\netcoreapp2.1\ConsoleConsumer.AssemblyInfoInputs.cache
+C:\Users\wilso\Desktop\Development\ConsoleConsumer\ConsoleConsumer\obj\Debug\netcoreapp2.1\ConsoleConsumer.AssemblyInfo.cs
+C:\Users\wilso\Desktop\Development\ConsoleConsumer\ConsoleConsumer\obj\Debug\netcoreapp2.1\ConsoleConsumer.dll
+C:\Users\wilso\Desktop\Development\ConsoleConsumer\ConsoleConsumer\obj\Debug\netcoreapp2.1\ConsoleConsumer.pdb

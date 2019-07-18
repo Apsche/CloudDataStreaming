@@ -37,25 +37,33 @@ namespace ConsoleProducers
             sendWeatherToProducer.Enabled = true;
             sendWeatherToProducer.AutoReset = true;
 
+            // _client.Consume("Traffic", _config);
+
             Console.WriteLine("\nPress the 'Enter' key to kill the application.");
             Console.WriteLine($"\nThe application started at {DateTime.Now}");
             Console.ReadLine();
+
+            // Stop timers
             sendTrafficToProducer.Stop();
+            sendWeatherToProducer.Stop();
+
+            // Dispose timers
             sendTrafficToProducer.Dispose();
+            sendWeatherToProducer.Dispose();
         }
 
         private static void OnTrafficTimedEvent(Object source, ElapsedEventArgs e)
         {
             // Get traffic data on 271 near Campus II
             var currentTraffic = _apiClient.GetTrafficData(_configPath, "41.57505,-81.44750").Result;
-            _client.Produce("Traffic", _config, "trafficKey", currentTraffic);
+            _client.Produce("Traffic", _config, "key", currentTraffic);
         }
         private static void OnWeatherTimedEvent(Object source, ElapsedEventArgs e)
         {
             // Get current weather conditions in Cleveland
             var currentWeather = _apiClient.GetWeatherData(_configPath, "Cleveland").Result;
             string serializedWeather = JsonConvert.SerializeObject(currentWeather);
-            _client.Produce("Weather", _config, "weatherKey", serializedWeather);
+            _client.Produce("Weather", _config, "key", serializedWeather);
         }
 
         static void PrintUsage()

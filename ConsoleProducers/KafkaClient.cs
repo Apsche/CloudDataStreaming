@@ -18,12 +18,6 @@ namespace ConsoleProducers
             try
             {
                 var cloudConfig = await ConfigToDictionary(configPath);
-                
-                // = (await File.ReadAllLinesAsync(configPath))
-                //     .Where(line => !line.StartsWith("#"))
-                //     .ToDictionary(
-                //         line => line.Substring(0, line.IndexOf('=')),
-                //         line => line.Substring(line.IndexOf('=') + 1));
 
                 var clientConfig = new ClientConfig
                 {

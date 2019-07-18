@@ -945,23 +945,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\wilso\\.nuget\\packages\\": {},
+    "C:\\Users\\jweid\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\wilso\\Desktop\\Development\\ConsoleConsumer\\ConsoleConsumer\\ConsoleConsumer.csproj",
+      "projectUniqueName": "C:\\Users\\jweid\\source\\repos\\Cloud-Data-Streaming\\ConsoleConsumer\\ConsoleConsumer\\ConsoleConsumer.csproj",
       "projectName": "ConsoleConsumer",
-      "projectPath": "C:\\Users\\wilso\\Desktop\\Development\\ConsoleConsumer\\ConsoleConsumer\\ConsoleConsumer.csproj",
-      "packagesPath": "C:\\Users\\wilso\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\wilso\\Desktop\\Development\\ConsoleConsumer\\ConsoleConsumer\\obj\\",
+      "projectPath": "C:\\Users\\jweid\\source\\repos\\Cloud-Data-Streaming\\ConsoleConsumer\\ConsoleConsumer\\ConsoleConsumer.csproj",
+      "packagesPath": "C:\\Users\\jweid\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\jweid\\source\\repos\\Cloud-Data-Streaming\\ConsoleConsumer\\ConsoleConsumer\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\wilso\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\jweid\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -990,7 +990,6 @@
             "version": "[1.0.0-beta3-ci-845, )"
           },
           "Microsoft.NETCore.App": {
-            "suppressParent": "All",
             "target": "Package",
             "version": "[2.1.0, )",
             "autoReferenced": true

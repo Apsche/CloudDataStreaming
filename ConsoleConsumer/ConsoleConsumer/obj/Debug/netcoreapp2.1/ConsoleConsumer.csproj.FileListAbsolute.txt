@@ -9,3 +9,14 @@ C:\Users\wilso\Desktop\Development\ConsoleConsumer\ConsoleConsumer\obj\Debug\net
 C:\Users\wilso\Desktop\Development\ConsoleConsumer\ConsoleConsumer\obj\Debug\netcoreapp2.1\ConsoleConsumer.AssemblyInfo.cs
 C:\Users\wilso\Desktop\Development\ConsoleConsumer\ConsoleConsumer\obj\Debug\netcoreapp2.1\ConsoleConsumer.dll
 C:\Users\wilso\Desktop\Development\ConsoleConsumer\ConsoleConsumer\obj\Debug\netcoreapp2.1\ConsoleConsumer.pdb
+C:\Users\jweid\source\repos\Cloud-Data-Streaming\ConsoleConsumer\ConsoleConsumer\obj\Debug\netcoreapp2.1\ConsoleConsumer.csprojAssemblyReference.cache
+C:\Users\jweid\source\repos\Cloud-Data-Streaming\ConsoleConsumer\ConsoleConsumer\obj\Debug\netcoreapp2.1\ConsoleConsumer.csproj.CoreCompileInputs.cache
+C:\Users\jweid\source\repos\Cloud-Data-Streaming\ConsoleConsumer\ConsoleConsumer\obj\Debug\netcoreapp2.1\ConsoleConsumer.AssemblyInfoInputs.cache
+C:\Users\jweid\source\repos\Cloud-Data-Streaming\ConsoleConsumer\ConsoleConsumer\obj\Debug\netcoreapp2.1\ConsoleConsumer.AssemblyInfo.cs
+C:\Users\jweid\source\repos\Cloud-Data-Streaming\ConsoleConsumer\ConsoleConsumer\obj\Debug\netcoreapp2.1\ConsoleConsumer.dll
+C:\Users\jweid\source\repos\Cloud-Data-Streaming\ConsoleConsumer\ConsoleConsumer\obj\Debug\netcoreapp2.1\ConsoleConsumer.pdb
+C:\Users\jweid\source\repos\Cloud-Data-Streaming\ConsoleConsumer\ConsoleConsumer\bin\Debug\netcoreapp2.1\ConsoleConsumer.deps.json
+C:\Users\jweid\source\repos\Cloud-Data-Streaming\ConsoleConsumer\ConsoleConsumer\bin\Debug\netcoreapp2.1\ConsoleConsumer.runtimeconfig.json
+C:\Users\jweid\source\repos\Cloud-Data-Streaming\ConsoleConsumer\ConsoleConsumer\bin\Debug\netcoreapp2.1\ConsoleConsumer.runtimeconfig.dev.json
+C:\Users\jweid\source\repos\Cloud-Data-Streaming\ConsoleConsumer\ConsoleConsumer\bin\Debug\netcoreapp2.1\ConsoleConsumer.dll
+C:\Users\jweid\source\repos\Cloud-Data-Streaming\ConsoleConsumer\ConsoleConsumer\bin\Debug\netcoreapp2.1\ConsoleConsumer.pdb

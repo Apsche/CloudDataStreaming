@@ -19,7 +19,6 @@
   <ItemGroup>
     <PackageReference Include="Confluent.Kafka" Version="1.1.0" />
     <PackageReference Include="Newtonsoft.Json" Version="12.0.2" />
-    <PackageReference Include="OpenWeatherMap4NET" Version="1.0.2" />
   </ItemGroup>
 
 </Project>

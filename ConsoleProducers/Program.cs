@@ -55,15 +55,14 @@ namespace ConsoleProducers
         private static void OnTrafficTimedEvent(Object source, ElapsedEventArgs e)
         {
             // Get traffic data on 271 near Campus II
-            var currentTraffic = _apiClient.GetTrafficData(_configPath, "41.57505,-81.44750").Result;
-            _client.Produce("Traffic", _config, "key", currentTraffic);
+            string currentTraffic = _apiClient.GetTrafficData(_configPath, "41.57505,-81.44750").Result;
+            _client.Produce("Traffic", _config, "mayfield", currentTraffic);
         }
         private static void OnWeatherTimedEvent(Object source, ElapsedEventArgs e)
         {
             // Get current weather conditions in Cleveland
-            var currentWeather = _apiClient.GetWeatherData(_configPath, "Cleveland").Result;
-            string serializedWeather = JsonConvert.SerializeObject(currentWeather);
-            _client.Produce("Weather", _config, "key", serializedWeather);
+            string currentWeather = _apiClient.GetWeatherData(_configPath, "Cleveland").Result;
+            _client.Produce("Weather", _config, "mayfield", currentWeather);
         }
 
         static void PrintUsage()

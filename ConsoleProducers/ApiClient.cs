@@ -1,9 +1,6 @@
 using System;
 using System.Net.Http;
 using System.Threading.Tasks;
-using OpenWeatherMap;
-using OpenWeatherMap.Entities;
-using OpenWeatherMap.Util;
 
 namespace ConsoleProducers
 {
@@ -33,24 +30,21 @@ namespace ConsoleProducers
             return trafficData;
         }
 
-        public async Task<Weather> GetWeatherData(string configPath, string city) 
+        public async Task<string> GetWeatherData(string configPath, string city) 
         {
             var config = await _kafkaClient.ConfigToDictionary(configPath);
             string key = config["weather.key"];
+            string rootPath = $"https://api.openweathermap.org/data/2.5/weather";
 
-            var weatherService = new OpenWeatherMapService(new OpenWeatherMapOptions
-            {
-                ApiKey = key
-            });
-            RequestOptions.Default.Unit = UnitType.Imperial;
-
-            Weather currentWeather = null;
+            string currentWeather = null;
 
             try
             {
-                currentWeather = await weatherService.GetCurrentWeatherAsync(city);
+                HttpResponseMessage response = await _client.GetAsync($"{rootPath}?q={city}&APPID={key}");
+                response.EnsureSuccessStatusCode();
+                currentWeather = await response.Content.ReadAsStringAsync();
             }
-            catch (Exception e)
+            catch (HttpRequestException e)
             {
                 Console.WriteLine($"\nWeather API failed with message: {e.Message}");
             }

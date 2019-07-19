@@ -60,8 +60,8 @@ public class Streamer
 
 		// Join the two streams on the location
 		KStream<String, String> joined = trafficSource.join(weatherSource, (leftValue, rightValue)
-			-> "traffic=" + leftValue + ", weather=" + rightValue,
-			JoinWindows.of(Duration.ofMinutes(5)),
+			-> "traffic: " + leftValue + ", weather: " + rightValue,
+			JoinWindows.of(Duration.ofMinutes(2)),
 			Joined.with(
 				Serdes.String(), /*key*/
 				Serdes.String(), /*Left (traffic) value*/

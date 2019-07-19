@@ -26,13 +26,13 @@ namespace ConsoleProducers
             _config = await _client.LoadConfig(_configPath, _certDir);
 
             // Set timer to send traffic data to producer
-            Timer sendTrafficToProducer = new Timer(5000);
+            Timer sendTrafficToProducer = new Timer(20000);
             sendTrafficToProducer.Elapsed += OnTrafficTimedEvent;
             sendTrafficToProducer.Enabled  = true;
             sendTrafficToProducer.AutoReset = true;
 
             // Set timer to send weather data to producer
-            Timer sendWeatherToProducer = new Timer(5000);
+            Timer sendWeatherToProducer = new Timer(20000);
             sendWeatherToProducer.Elapsed += OnWeatherTimedEvent;
             sendWeatherToProducer.Enabled = true;
             sendWeatherToProducer.AutoReset = true;

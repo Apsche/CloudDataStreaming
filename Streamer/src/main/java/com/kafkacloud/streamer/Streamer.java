@@ -19,6 +19,10 @@ import org.apache.kafka.clients.producer.ProducerConfig;
 import org.apache.kafka.streams.kstream.JoinWindows;
 import org.apache.kafka.streams.kstream.Joined;
 import org.apache.kafka.streams.KafkaStreams;
+import org.apache.kafka.streams.kstream.Printed;
+import org.apache.avro.Schema;
+import org.apache.avro.generic.GenericData;
+import org.apache.avro.generic.GenericRecord;
 
 import io.confluent.kafka.serializers.KafkaAvroSerializer;
 
@@ -35,12 +39,14 @@ public class Streamer
 		Properties props = new Properties();
 		props.put(StreamsConfig.APPLICATION_ID_CONFIG, "streamer");
 		props.put(StreamsConfig.BOOTSTRAP_SERVERS_CONFIG, "pkc-ldrz4.us-east-2.aws.confluent.cloud:9092");
-		props.put(StreamsConfig.DEFAULT_KEY_SERDE_CLASS_CONFIG, "io.confluent.kafka.serializers.KafkaAvroSerializer");
-		props.put(StreamsConfig.DEFAULT_VALUE_SERDE_CLASS_CONFIG, "io.confluent.kafka.serializers.KafkaAvroSerializer");
+		props.put(StreamsConfig.DEFAULT_KEY_SERDE_CLASS_CONFIG, Serdes.String().getClass().getName());
+		props.put(StreamsConfig.DEFAULT_VALUE_SERDE_CLASS_CONFIG, Serdes.String().getClass().getName());
 		props.put(StreamsConfig.SECURITY_PROTOCOL_CONFIG, "SASL_SSL");
+		props.put(StreamsConfig.REPLICATION_FACTOR_CONFIG, "3");
 		props.put(SaslConfigs.SASL_MECHANISM, "PLAIN");
 		props.put(SaslConfigs.SASL_JAAS_CONFIG, "org.apache.kafka.common.security.plain.PlainLoginModule required username=\"7BYZ6FIYJIJQ7NCR\" " +
-			"password= \"Du+0pUmUl5rabqiJQGO20EBlpTHhk7AnEpC2V02WuljKhw0hQBdnE7uKUzGK5zkY\";");//Not sure if i did this one right
+			"password= \"Du+0pUmUl5rabqiJQGO20EBlpTHhk7AnEpC2V02WuljKhw0hQBdnE7uKUzGK5zkY\";");
+		props.put("acks", "1");
 		//props.put(StreamsConfig.producerPrefix(ProducerConfig.REQUEST_TIMEOUT_MS_CONFIG), 20000); //this is causing an error
 
 		// Defines computational logic of streams builder
@@ -91,11 +97,13 @@ public class Streamer
 
 		try
 		{
+			streams.cleanUp();
 			streams.start();
 			latch.await();
 		}
 		catch (Throwable e)
 		{
+			System.out.println(e);
 			System.exit(1);
 		}
 		System.exit(0);

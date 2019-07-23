@@ -6,3 +6,4 @@ In order to run the Kafka Streams program:
 
 Note: There is a bug right now that may prevent the program from runnning. 
 To fix this, go into the systems temporary data then into kafka-streams/streamer and delete everything within that directory.
+https://issues.apache.org/jira/browse/KAFKA-6647

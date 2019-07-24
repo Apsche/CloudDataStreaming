@@ -30,6 +30,9 @@ import java.util.concurrent.CountDownLatch;
 import java.util.Properties;
 import java.time.Duration;
 import org.json.*;
+import java.sql.Timestamp;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 public class Streamer
 {
@@ -120,15 +123,16 @@ public class Streamer
 		JSONObject jObject = new JSONObject();
 
 		// Find the fields in two JSONs that we want and add them into our new JSON
-		jObject.put("currentSpeed", trafficJSON.getJSONObject("flowSegmentData").get("currentSpeed")); // Driver Speed
-		jObject.put("confidence", trafficJSON.getJSONObject("flowSegmentData").get("confidence")); // Driver Confidence
+		jObject.put("timestamp", new Timestamp(System.currentTimeMillis()).getTime()); // Timestamp
+		jObject.put("averageDrivingSpeed", trafficJSON.getJSONObject("flowSegmentData").get("currentSpeed")); // Driver Speed
+		jObject.put("driverConfidence", trafficJSON.getJSONObject("flowSegmentData").get("confidence")); // Driver Confidence
 		jObject.put("weatherDescription", weatherJSON.getJSONArray("weather").getJSONObject(0).get("description")); // Weather Description
 		jObject.put("temp", weatherJSON.getJSONObject("main").get("temp")); // Temperature
 		jObject.put("humidity", weatherJSON.getJSONObject("main").get("humidity")); // Humidity
 		jObject.put("windSpeed", weatherJSON.getJSONObject("wind").get("speed")); // Wind Speed
 		jObject.put("windDeg", weatherJSON.getJSONObject("wind").get("deg")); // Wind Direction
 		jObject.put("clouds", weatherJSON.getJSONObject("clouds").get("all")); // Clouds
-		jObject.put("name", weatherJSON.get("name")); // Location Name
+		jObject.put("location", weatherJSON.get("name")); // Location Name
 
 		// Turn the JSON back into a string and return
 		return jObject.toString();

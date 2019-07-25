@@ -40,7 +40,7 @@ namespace ConsoleProducers
 
             try
             {
-                HttpResponseMessage response = await _client.GetAsync($"{rootPath}?q={city}&APPID={key}");
+                HttpResponseMessage response = await _client.GetAsync($"{rootPath}?q={city}&APPID={key}&units=imperial");
                 response.EnsureSuccessStatusCode();
                 currentWeather = await response.Content.ReadAsStringAsync();
             }

@@ -89,6 +89,7 @@ namespace ConsoleProducers
                     else 
                     {
                         Console.WriteLine($"Sent message to {topic} at {DateTime.Now.ToShortDateString()} {DateTime.Now.ToLongTimeString()}");
+                        System.Console.WriteLine($"\n{value}\n");
                     }
                 });
 

@@ -1,0 +1,78 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\jweid\\source\\repos\\Cloud-Data-Streaming\\ConsumerServer\\ConsumerServer\\ConsumerServer.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\jweid\\source\\repos\\Cloud-Data-Streaming\\ConsumerServer\\ConsumerServer\\ConsumerServer.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\jweid\\source\\repos\\Cloud-Data-Streaming\\ConsumerServer\\ConsumerServer\\ConsumerServer.csproj",
+        "projectName": "ConsumerServer",
+        "projectPath": "C:\\Users\\jweid\\source\\repos\\Cloud-Data-Streaming\\ConsumerServer\\ConsumerServer\\ConsumerServer.csproj",
+        "packagesPath": "C:\\Users\\jweid\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\jweid\\source\\repos\\Cloud-Data-Streaming\\ConsumerServer\\ConsumerServer\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\jweid\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp2.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp2.1": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp2.1": {
+          "dependencies": {
+            "Confluent.Kafka": {
+              "target": "Package",
+              "version": "[1.1.0, )"
+            },
+            "Microsoft.AspNet.WebApi.Cors": {
+              "target": "Package",
+              "version": "[5.2.7, )"
+            },
+            "Microsoft.AspNetCore.App": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.1.1, )",
+              "autoReferenced": true
+            },
+            "Microsoft.AspNetCore.Razor.Design": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.1.2, )"
+            },
+            "Microsoft.NETCore.App": {
+              "target": "Package",
+              "version": "[2.1.0, )",
+              "autoReferenced": true
+            }
+          },
+          "imports": [
+            "net461"
+          ],
+          "assetTargetFallback": true,
+          "warn": true
+        }
+      }
+    }
+  }
+}

@@ -1,4 +1,4 @@
-import { Card, CardContent, Grid, Typography } from "@material-ui/core";
+import { Button, Card, CardContent, Grid, Typography } from "@material-ui/core";
 
 import React from "react";
 import { makeStyles } from "@material-ui/styles";
@@ -9,7 +9,7 @@ const useStyles = makeStyles({
   }
 });
 
-function LandingContent() {
+function LandingContent(props) {
   const classes = useStyles();
   return (
     <div>
@@ -20,11 +20,19 @@ function LandingContent() {
               <Typography variant="h4">
                 This is where we'll display our sweet info
               </Typography>
-              <Typography variant="body2">
-                You know... when we have it...
-              </Typography>
             </CardContent>
           </Card>
+          {/* This is the data coming from our consumer */}
+          <p>Wind Deg: {props.data.windDeg}</p>
+          <p>Temp: {props.data.temp}</p>
+          <p>Weather desc: {props.data.weatherDescription}</p>
+          <p>Confidence: {props.data.confidence}</p>
+          <p>Name: {props.data.name}</p>
+          <p>Humidity: {props.data.humidity}</p>
+          <p>Clouds: {props.data.clouds}</p>
+          <p>Current Speed: {props.data.currentSpeed}</p>
+          <p>Wind Speed: {props.data.windSpeed}</p>
+          <p>Timestamp: {props.data.Timestamp}</p>
         </Grid>
       </Grid>
     </div>
